@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
+import '../static/css/adminindex.css'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 const { Header, Content, Footer, Sider } = Layout
 const { SubMenu } = Menu
-import './static/css/adminindex.css'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 const AdminIndex = () => {
   let [collapsed, setcollapsed] = useState(false)
 
@@ -29,28 +28,16 @@ const AdminIndex = () => {
               title={
                 <span>
                   <Icon type='user' />
-                  <span>User</span>
+                  <span>文章管理</span>
                 </span>
               }
             >
               <Menu.Item key='3'>文章列表</Menu.Item>
               <Menu.Item key='4'>留言管理</Menu.Item>
             </SubMenu>
-            <SubMenu
-              key='sub2'
-              title={
-                <span>
-                  <Icon type='team' />
-                  <span>Team</span>
-                </span>
-              }
-            >
-              <Menu.Item key='6'>Team 1</Menu.Item>
-              <Menu.Item key='8'>Team 2</Menu.Item>
-            </SubMenu>
             <Menu.Item key='9'>
               <Icon type='file' />
-              <span>File</span>
+              <span>留言管理</span>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -58,10 +45,10 @@ const AdminIndex = () => {
           <Header style={{ background: '#fff', padding: 0 }} />
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+              <Breadcrumb.Item>首页</Breadcrumb.Item>
+              <Breadcrumb.Item>文章管理</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>Bill is a cat.</div>
+            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>后台文章管理</div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
         </Layout>
